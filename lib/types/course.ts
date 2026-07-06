@@ -29,6 +29,8 @@ export type Lesson = {
   title: string;
   badges?: LessonBadge[];
   locked: boolean;
+  pdfUrl?: string;
+  hasExam?: boolean;
 };
 
 export type CurriculumWeek = {
@@ -43,6 +45,7 @@ export type CourseDetails = {
   slug: string;
   title: string;
   videoThumbnail: string;
+  videoUrl: string;
   materials: CourseMaterial[];
   comments: Comment[];
   progress: number;

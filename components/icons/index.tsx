@@ -149,6 +149,19 @@ export function ChevronRightIcon({ className }: IconProps) {
   );
 }
 
+export function BackIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 512 512"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M177.7 256l136-136c9.4-9.4 9.4-24.6 0-33.9l-1.4-1.4c-9.4-9.4-24.6-9.4-33.9 0L108.3 245.7c-9.4 9.4-9.4 24.6 0 33.9l170.1 170.1c9.4 9.4 24.6 9.4 33.9 0l1.4-1.4c9.4-9.4 9.4-24.6 0-33.9L177.7 256z" />
+    </svg>
+  );
+}
+
 export function InstructorIcon({ className }: IconProps) {
   return (
     <svg
@@ -254,6 +267,86 @@ export function UserPlusIcon({ className }: IconProps) {
       <path d="M6 21v-2a4 4 0 0 1 4-4h3.5" />
       <path d="M19 22v.01" />
       <path d="M19 19a2.003 2.003 0 0 0 .914-3.782a1.98 1.98 0 0 0-2.414.483" />
+    </svg>
+  );
+}
+
+export function LeaderboardIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M8 21h8" />
+      <path d="M12 17v4" />
+      <path d="M7 4h10l1 7H6l1-7z" />
+      <path d="M6 11h12v2a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4v-2z" />
+      <path d="M9 7V4" />
+      <path d="M15 7V4" />
+    </svg>
+  );
+}
+
+export function CloseIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </svg>
+  );
+}
+
+export function MaximizeIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+      <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+      <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+      <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+    </svg>
+  );
+}
+
+export function WideIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M2 7h20" />
+      <path d="M2 17h20" />
+      <path d="M6 7v10" />
+      <path d="M18 7v10" />
     </svg>
   );
 }

@@ -5,6 +5,7 @@ export const courseDetails: CourseDetails = {
   slug: "starting-seo-as-your-home",
   title: "Starting SEO as your Home",
   videoThumbnail: "/course-45.jpg",
+  videoUrl: "https://www.youtube.com/watch?v=knj1eZ7sr9U",
   materials: [
     { icon: "duration", label: "Duration", value: "3 weeks" },
     { icon: "lessons", label: "Lessons", value: "8" },
@@ -55,11 +56,13 @@ export const courseDetails: CourseDetails = {
             { label: "10 MINUTES", variant: "duration" },
           ],
           locked: false,
+          pdfUrl: "/Abdullah Yosry - Resume.pdf",
         },
         {
           id: "l4",
           title: "Course Exercise / Reference Files",
-          locked: true,
+          locked: false,
+          hasExam: true,
         },
         {
           id: "l5",
@@ -85,6 +88,7 @@ export const courseDetails: CourseDetails = {
             { label: "15 MINUTES", variant: "duration" },
           ],
           locked: false,
+          hasExam: true,
         },
         { id: "l10", title: "Global Variable and Scope", locked: true },
         {

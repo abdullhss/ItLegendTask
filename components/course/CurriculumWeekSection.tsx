@@ -3,9 +3,15 @@ import { LessonRow } from "./LessonRow";
 
 type CurriculumWeekSectionProps = {
   week: CurriculumWeek;
+  onOpenPdf?: (url: string, title: string) => void;
+  onOpenExam?: (title: string) => void;
 };
 
-export function CurriculumWeekSection({ week }: CurriculumWeekSectionProps) {
+export function CurriculumWeekSection({
+  week,
+  onOpenPdf,
+  onOpenExam,
+}: CurriculumWeekSectionProps) {
   return (
     <div className="mt-[60px] border border-border px-[15px] py-10">
       <div className="mb-5">
@@ -18,7 +24,11 @@ export function CurriculumWeekSection({ week }: CurriculumWeekSectionProps) {
       <div role="list" aria-label={`${week.title} lessons`}>
         {week.lessons.map((lesson) => (
           <div key={lesson.id} role="listitem">
-            <LessonRow lesson={lesson} />
+            <LessonRow
+              lesson={lesson}
+              onOpenPdf={onOpenPdf}
+              onOpenExam={onOpenExam}
+            />
           </div>
         ))}
       </div>

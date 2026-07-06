@@ -35,6 +35,10 @@
   --font-sans: var(--font-league-spartan);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -69,4 +73,19 @@ body {
   transform: translateX(-50%);
   border: 4px solid transparent;
   border-top-color: #c8c8c8;
+}
+
+.course-player--playing:fullscreen,
+.course-player--playing:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  max-height: none;
+  aspect-ratio: auto;
+  background: #000;
+}
+
+.course-player--playing:fullscreen iframe,
+.course-player--playing:-webkit-full-screen iframe {
+  width: 100%;
+  height: 100%;
 }
