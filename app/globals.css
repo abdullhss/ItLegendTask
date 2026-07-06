@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f9fa;
+  --foreground: #333333;
+  --muted: #777777;
+  --text-secondary: #939393;
+  --border: #e5e5e5;
+  --header-bg: #f5f9fa;
+  --play-accent: #e54860;
+  --progress-fill: #6abd8a;
+  --submit-btn: #41b69d;
+  --badge-teal-bg: #e0f7fa;
+  --badge-teal-text: #00796b;
+  --badge-pink-bg: #ffebee;
+  --badge-pink-text: #d32f2f;
+  --progress-marker: #485293;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-muted: var(--muted);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+  --color-header-bg: var(--header-bg);
+  --color-play-accent: var(--play-accent);
+  --color-progress-fill: var(--progress-fill);
+  --color-submit-btn: var(--submit-btn);
+  --color-badge-teal-bg: var(--badge-teal-bg);
+  --color-badge-teal-text: var(--badge-teal-text);
+  --color-badge-pink-bg: var(--badge-pink-bg);
+  --color-badge-pink-text: var(--badge-pink-text);
+  --color-progress-marker: var(--progress-marker);
+  --font-sans: var(--font-league-spartan);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  padding-bottom: 300px;
+}
+
+.course-materials-grid .material-item:nth-of-type(2n) {
+  margin-left: 15%;
+}
+
+.course-materials-grid .material-item:nth-of-type(7),
+.course-materials-grid .material-item:nth-of-type(8) {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .course-materials-grid .material-item:nth-of-type(2n) {
+    margin-left: 0;
+  }
+
+  .course-materials-grid .material-item:nth-of-type(7) {
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.progress-marker::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #c8c8c8;
 }
